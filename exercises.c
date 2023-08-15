@@ -32,7 +32,7 @@ void reverseArray(int arr[], int size) {
     int aux = arr[inicio];
     arr[inicio] = arr[final];
     arr[final] = aux;
-
+    
     inicio++;
     final--;
   }
@@ -45,19 +45,14 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) { 
-  int cont = 0;
-  for(size_t i = 0; i < size; i++) {
-    if(arr[i] % 2 == 0) {
-      cont++;
-    }
-  }
-  
-  int *newArr = (int *) malloc(sizeof(int) * cont);
+  int *newArr = NULL;
   *newSize = 0;
+  
   for(size_t i = 0; i < size; i++) {
     if(arr[i] % 2 == 0) {
-      newArr[*newSize] = arr[i];
       (*newSize)++;
+      newArr = (int *) realloc(newArr, sizeof(int) * (*newSize));
+      newArr[*newSize] = arr[i];
     }
   }
   return newArr;
