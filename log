@@ -57,3 +57,17 @@ exercises.c:55:16: error: returning ‘int’ from a function with return type �
 cc1: all warnings being treated as errors
 Compilation failed
 74bddc3
+Tue 15 Aug 2023 08:57:52 PM UTC: 
+ exercises.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:48:7: error: array size missing in ‘newArr’
+   48 |   int newArr[];
+      |       ^~~~~~
+exercises.c:56:10: error: function returns address of local variable [-Werror=return-local-addr]
+   56 |   return newArr;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8149b84
