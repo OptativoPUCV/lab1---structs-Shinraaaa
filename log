@@ -93,3 +93,14 @@ Tue 15 Aug 2023 08:58:57 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 8104572
+Tue 15 Aug 2023 09:01:20 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:56:10: error: function returns address of local variable [-Werror=return-local-addr]
+   56 |   return newArr;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b214ded
