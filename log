@@ -132,3 +132,17 @@ Tue 15 Aug 2023 09:05:50 PM UTC:
  tests:  0|4
 total_score: 30/70
 83cb706
+Tue 15 Aug 2023 09:07:06 PM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:54:15: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   54 |       *newArr = (int *) malloc(sizeof(int) * *newSize);
+      |               ^
+exercises.c:58:10: error: ‘newArr’ is used uninitialized [-Werror=uninitialized]
+   58 |   return newArr;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+57c5173
