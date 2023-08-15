@@ -71,3 +71,20 @@ exercises.c:56:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 8149b84
+Tue 15 Aug 2023 08:58:48 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:48:16: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   48 |   int newArr = NULL;
+      |                ^~~~
+exercises.c:53:13: error: subscripted value is neither array nor pointer nor vector
+   53 |       newArr[(*newSize)] = arr[i];
+      |             ^
+exercises.c:56:10: error: returning ‘int’ from a function with return type ‘int *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   56 |   return newArr;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e1b5e24
