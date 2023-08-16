@@ -112,14 +112,14 @@ int checkSorted(int arr[], int size) {
   size_t i = 0;
   size_t j = 0;
   
-  while(i < size - 1 && arr[i] <= arr[i + 1]) {
+  while(i < size && arr[i] <= arr[i + 1]) {
     if(i == size - 1) {
       return 1;
     }
     i++;
   }
   
-  while(j < size - 1 && arr[j] >= arr[j + 1]) {
+  while(j < size && arr[j] >= arr[j + 1]) {
     if(j == size - 1) {
       return -1;
     }
