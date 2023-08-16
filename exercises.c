@@ -45,14 +45,22 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) { 
-  int *newArr = NULL;
+  /* Se cuenta la cantidad de numeros pares totales para
+     luego asignar la cantidad necesaria de memoria. */
+  int cont = 0;
+  for(size_t i = 0; i < size; i++) {
+    if(arr[i] % 2 == 0) {
+      cont++;
+    }
+  }
+  
+  int *newArr = (int *) malloc(sizeof(int) * cont);
   *newSize = 0;
   
   for(size_t i = 0; i < size; i++) {
     if(arr[i] % 2 == 0) {
+      newArr[*newSize] = arr[i];
       (*newSize)++;
-      newArr = (int *) realloc(newArr, sizeof(int) * (*newSize));
-      newArr[*newSize - 1] = arr[i];
     }
   }
   return newArr;
@@ -87,7 +95,6 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
     i++;
     k++;
   }
-
   while (j < size2) {
     result[k] = arr2[j];
     j++;
