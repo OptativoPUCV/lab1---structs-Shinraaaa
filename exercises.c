@@ -148,9 +148,9 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) {
   struct Libro libro;
   strcpy(libro.titulo);
-  strcpy(linro.autor.nombre);
-  strcpy(linro.autor.anioNacimiento);
-  strcpy(linro.anioPublicacion);
+  strcpy(libro.autor.nombre);
+  strcpy(libro.autor.anioNacimiento);
+  strcpy(libro.anioPublicacion);
 }
 
 /*
