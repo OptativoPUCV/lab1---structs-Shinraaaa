@@ -149,8 +149,8 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
   // struct Libro *libro; se debe crear cuando no lo dan.
   strcpy(libro->titulo, titulo);
   strcpy(libro->autor.nombre, nombreAutor);
-  anioNacimiento = libro->autor.anioNacimiento;
-  anioPublicacion = libro->anioPublicacion;
+  libro->autor.anioNacimiento =  anioNacimiento;
+  libro->anioPublicacion = anioPublicacion;
 }
 
 /*
