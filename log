@@ -603,3 +603,23 @@ exercises.c:153:9: error: assignment to ‘Libro *’ from ‘int’ makes point
 cc1: all warnings being treated as errors
 Compilation failed
 4b66e25
+Thu 17 Aug 2023 08:46:03 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:152:30: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  152 |   libro->autor.anioNacimiento, anioNacimiento;
+      |                              ^
+exercises.c:152:3: error: statement with no effect [-Werror=unused-value]
+  152 |   libro->autor.anioNacimiento, anioNacimiento;
+      |   ^~~~~
+exercises.c:153:25: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  153 |   libro->anioPublicacion, anioPublicacion;
+      |                         ^
+exercises.c:153:3: error: statement with no effect [-Werror=unused-value]
+  153 |   libro->anioPublicacion, anioPublicacion;
+      |   ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0cdd43f
