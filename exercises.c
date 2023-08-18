@@ -55,6 +55,10 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   }
   
   int *newArr = (int *) malloc(sizeof(int) * cont);
+  if (newArr == NULL) {
+    *newSize = 0; // no existen numeros pares
+    return NULL;
+  }
   *newSize = 0;
   
   for(size_t i = 0; i < size; i++) {
@@ -175,6 +179,8 @@ Nodo *crearListaEnlazada(int arr[], int size) {
 
   for (int i = 0; i < size; i++) {
     *temp = (Nodo *)malloc(sizeof(Nodo));
+
+    if (*temp == NULL) return NULL;
     
     (*temp)->numero = arr[i];
     (*temp)->siguiente = NULL;
